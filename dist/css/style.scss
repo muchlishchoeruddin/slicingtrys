@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap');
+
+$black:#333;
+$blue:#00dee5;
+$green:#00ecba;
+$orange:#ffcb64;
+$pink:#ff48b7;
+
+html,body{
+	font-family: 'Poppins', sans-serif;
+}
+.trys-nav{
+	float:right;
+	padding:{
+		top:47px;
+		bottom:47px;
+		right:170px;
+	}
+	.nav-bars{
+		cursor:pointer;
+		width:35px;
+		height:6px;
+		background-color: $blue;
+		border-radius: 8px;
+		@mixin before-after{
+			content:'';
+			height:6px;
+			display: block;
+			position: absolute;
+			background-color: $blue;
+			border-radius: 8px;
+		}
+		&:before{
+			@include before-after;
+			width:35px;
+			margin-top:-12px;
+		}
+		&:after{
+			width:18px;
+			@include before-after;
+			margin-top:12px;
+		}
+
+	}
+}
